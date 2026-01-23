@@ -1,0 +1,73 @@
+ii<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Building...</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Simple keyframe animation for the spinner */
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .animate-spin-slow {
+            animation: spin 2s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans flex items-center justify-center min-h-screen p-6">
+
+    <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl max-w-2xl w-full border border-gray-700">
+        
+        <!-- Header Section -->
+        <div class="text-center mb-6">
+            <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">DocuQuery AI — Production RAG Platform</h1>
+            <p class="text-2xl text-blue-300">Currently , Project is being built 🏗️ ⚙️............</p>
+        </div>
+
+        <!-- Animated Spinner -->
+        <div class="flex justify-center items-center my-8">
+            <div class="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin-slow"></div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="text-center text-gray-300 space-y-5">
+            <p class="text-lg">
+                We're deploying the latest updates — check back soon or view the source.
+            </p>
+            <p class="text-md bg-gray-700 p-4 rounded-lg border border-gray-600">
+                <span class="font-semibold text-white">Small preview info:</span> production RAG system with PDF ingestion, semantic search and cost-optimised LLM routing. Live demo and repo links below.
+            </p>
+
+            <!-- Links -->
+            
+        </div>
+
+        <!-- Divider -->
+        <hr class="border-gray-600 my-8">
+
+        <!-- Footer Info -->
+        <div class="text-center text-gray-400">
+            <p class="mb-3">
+                <span class="font-semibold text-gray-200 mr-2">Tech stack:</span>
+                <!-- Highlighted Tech Stack Badges -->
+                <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">FastAPI</span>
+                <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">LangChain</span>
+                <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">ChromaDB</span>
+                <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">Docker</span>
+            </p>
+            <p>
+                <span class="font-semibold text-gray-200">Contact:</span> <a href="mailto:      johnch428@gmail.com" class="text-blue-400 hover:underline"> johnch428@gmail.com</a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
