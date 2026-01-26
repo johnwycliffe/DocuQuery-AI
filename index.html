@@ -1,73 +1,126 @@
-ii<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Building...</title>
-    <!-- Load Tailwind CSS -->
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        /* Simple keyframe animation for the spinner */
+        /* Spinner animation */
         @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
         .animate-spin-slow {
             animation: spin 2s linear infinite;
         }
+
+        /* Glow animation for DocuQuery UI link */
+        @keyframes textglow {
+            0%, 100% { text-shadow: 0 0 6px #22d3ee; }
+            50% { text-shadow: 0 0 14px #67e8f9; }
+        }
+        .text-glow {
+            animation: textglow 2s infinite ease-in-out;
+        }
+
+        /* Slow marquee animation */
+        @keyframes marquee {
+            0%   { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite; /* SLOWED SPEED */
+        }
     </style>
 </head>
+
 <body class="bg-gray-900 text-gray-100 font-sans flex items-center justify-center min-h-screen p-6">
 
-    <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl max-w-2xl w-full border border-gray-700">
-        
-        <!-- Header Section -->
-        <div class="text-center mb-6">
-            <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">DocuQuery AI — Production RAG Platform</h1>
-            <p class="text-2xl text-blue-300">Currently , Project is being built 🏗️ ⚙️............</p>
+<div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl max-w-2xl w-full border border-gray-700">
+
+    <!-- Header -->
+    <div class="text-center mb-6">
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">
+            DocuChat AI — Production RAG Platform
+        </h1>
+        <p class="text-2xl text-blue-300">
+            Currently, Project is getting fixed  🏗️ ⚙️............
+        </p>
+    </div>
+
+    <!-- Spinner -->
+    <div class="flex justify-center items-center my-8">
+        <div class="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin-slow"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="text-center text-gray-300 space-y-5">
+
+       <p class="text-lg">
+    We're deploying the latest updates — check back soon or view the source 
+    <a href="https://github.com/johnwycliffe/DocuQuery-AI"
+       target="blank"
+       class="text-cyan-300 font-semibold underline underline-offset-4 hover:text-white transition">
+        code
+    </a> .
+</p>
+
+
+        <p class="text-md bg-gray-700 p-4 rounded-lg border border-gray-600">
+            <span class="font-semibold text-white">Small preview info:</span>
+            Production RAG system with PDF ingestion, semantic search and cost-optimised LLM routing.
+            Live demo UI and source code repo links below.
+        </p>
+
+        <!-- Inline href -->
+        <div class="mt-6 text-lg md:text-xl font-semibold text-gray-200">
+            Check here for 
+            <a href="https://your-docuquery-ui-link.com"
+               target="_blank"
+               class="font-bold text-cyan-300 underline underline-offset-4 decoration-cyan-400 text-glow hover:text-white transition">
+                DocuChat  UI
+            </a>
         </div>
 
-        <!-- Animated Spinner -->
-        <div class="flex justify-center items-center my-8">
-            <div class="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin-slow"></div>
-        </div>
-
-        <!-- Content Section -->
-        <div class="text-center text-gray-300 space-y-5">
-            <p class="text-lg">
-                We're deploying the latest updates — check back soon or view the source.
-            </p>
-            <p class="text-md bg-gray-700 p-4 rounded-lg border border-gray-600">
-                <span class="font-semibold text-white">Small preview info:</span> production RAG system with PDF ingestion, semantic search and cost-optimised LLM routing. Live demo and repo links below.
-            </p>
-
-            <!-- Links -->
-            
-        </div>
-
-        <!-- Divider -->
-        <hr class="border-gray-600 my-8">
-
-        <!-- Footer Info -->
-        <div class="text-center text-gray-400">
-            <p class="mb-3">
-                <span class="font-semibold text-gray-200 mr-2">Tech stack:</span>
-                <!-- Highlighted Tech Stack Badges -->
-                <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">FastAPI</span>
-                <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">LangChain</span>
-                <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">ChromaDB</span>
-                <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">Docker</span>
-            </p>
-            <p>
-                <span class="font-semibold text-gray-200">Contact:</span> <a href="mailto:      johnch428@gmail.com" class="text-blue-400 hover:underline"> johnch428@gmail.com</a>
-            </p>
+        <!-- Breaking News Marquee -->
+        <div class="mt-4 w-full overflow-hidden bg-gray-900 rounded border-l-4 border-yellow-500 py-2 relative">
+            <div class="animate-marquee text-red-400 font-mono text-sm tracking-widest font-bold">
+                ⚠️ UPDATE: Project Name has been changed to DocuChat AI from DocuQuery AI &nbsp;&nbsp;&nbsp; /// &nbsp;&nbsp;&nbsp;
+                ⚠️ UPDATE: Project Name has been changed to DocuChat AI from DocuQuery AI
+                    
+            </div>
         </div>
 
     </div>
+
+    <!-- Divider -->
+    <hr class="border-gray-600 my-8">
+
+    <!-- Footer -->
+    <div class="text-center text-gray-400">
+        <p class="mb-3">
+            <span class="font-semibold text-gray-200 mr-2">Tech stack:</span>
+            <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">FastAPI</span>
+            <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">LangChain</span>
+            <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">ChromaDB</span>
+            <span class="inline-block bg-gray-700 text-blue-300 py-1 px-3 rounded-full text-sm font-medium m-1">Docker</span>
+        </p>
+
+        <p>
+            <span class="font-semibold text-gray-200">Contact:</span>
+            <a href="mailto:johnch428@gmail.com" class="text-blue-400 hover:underline">
+                johnch428@gmail.com
+            </a>
+        </p>
+    </div>
+
+</div>
 
 </body>
 </html>
